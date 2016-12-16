@@ -53,7 +53,7 @@
 		<codepage>1252</codepage>
 		<title>Installation Database</title>
 		<subject></subject>
-		<author>InstallShield</author>
+		<author>##ID_STRING6##</author>
 		<keywords>Installer,MSI,Database</keywords>
 		<comments>Contact:  Your local administrator</comments>
 		<template>Intel;1033</template>
@@ -225,6 +225,7 @@
 	<table name="AppSearch">
 		<col key="yes" def="s72">Property</col>
 		<col key="yes" def="s72">Signature_</col>
+		<row><td>DOTNETVERSION45FULL</td><td>DotNet45Full</td></row>
 	</table>
 
 	<table name="BBControl">
@@ -339,8 +340,15 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>ExcelAddIn1.Primary_output</td><td>{548ADA20-1FD0-4185-A5EF-19BAFA1F164C}</td><td>INSTALLDIR</td><td>2</td><td/><td>exceladdin1.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ExcelAddIn1.dll</td><td>{0FBAA263-FE46-4135-949F-5120CA9937DC}</td><td>INSTALLDIR</td><td>2</td><td/><td>exceladdin1.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{1F2CD3EB-7743-448B-820C-C60B358770B8}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Office.Tools.Common.dll</td><td>{A32E2C6E-ECC2-4CB7-9265-BD2F5F9C9556}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.office.tools.commo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Office.Tools.Common.v4.0.Utilities.dll</td><td>{F02A21A3-60C1-4398-B33C-18BA67B17EB3}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.office.tools.commo1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Office.Tools.Excel.dll</td><td>{D4BE508A-59BD-49E8-A7E4-072922232116}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.office.tools.excel</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Office.Tools.dll</td><td>{1277A793-F91A-4162-ABDB-757B068E5589}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.office.tools.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Office.Tools.v4.0.Framework.dll</td><td>{FB9C26E6-0BB4-41B0-ABB6-4D891E3A66B0}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.office.tools.v4.0.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.VisualStudio.Tools.Applications.Runtime.dll</td><td>{CA05D1BB-1430-4A46-8BD5-29D2E9391DE3}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.visualstudio.tools</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MySql.Data.dll</td><td>{BD04BC8D-5204-4630-B632-6B4CBCCA2EDF}</td><td>INSTALLDIR</td><td>2</td><td/><td>mysql.data.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -909,7 +917,7 @@
 		<row><td>CustomSetup</td><td>Next</td><td>NewDialog</td><td>ReadyToInstall</td><td>OutOfNoRbDiskSpace &lt;&gt; 1</td><td>0</td></row>
 		<row><td>CustomSetup</td><td>Next</td><td>[_IsSetupTypeMin]</td><td>Custom</td><td>1</td><td>0</td></row>
 		<row><td>CustomSetupTips</td><td>OK</td><td>EndDialog</td><td>Return</td><td>1</td><td>1</td></row>
-		<row><td>CustomerInformation</td><td>Back</td><td>NewDialog</td><td>LicenseAgreement</td><td>1</td><td>1</td></row>
+		<row><td>CustomerInformation</td><td>Back</td><td>NewDialog</td><td>InstallWelcome</td><td>NOT Installed</td><td>1</td></row>
 		<row><td>CustomerInformation</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
 		<row><td>CustomerInformation</td><td>Next</td><td>EndDialog</td><td>Exit</td><td>(SERIALNUMVALRETRYLIMIT) And (SERIALNUMVALRETRYLIMIT&lt;0) And (SERIALNUMVALRETURN&lt;&gt;SERIALNUMVALSUCCESSRETVAL)</td><td>2</td></row>
 		<row><td>CustomerInformation</td><td>Next</td><td>NewDialog</td><td>ReadyToInstall</td><td>(Not SERIALNUMVALRETURN) OR (SERIALNUMVALRETURN=SERIALNUMVALSUCCESSRETVAL)</td><td>3</td></row>
@@ -937,7 +945,7 @@
 		<row><td>InstallChangeFolder</td><td>Up</td><td>DirectoryListUp</td><td>0</td><td>1</td><td>0</td></row>
 		<row><td>InstallWelcome</td><td>Back</td><td>NewDialog</td><td>SplashBitmap</td><td>Display_IsBitmapDlg</td><td>0</td></row>
 		<row><td>InstallWelcome</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
-		<row><td>InstallWelcome</td><td>Next</td><td>NewDialog</td><td>LicenseAgreement</td><td>1</td><td>0</td></row>
+		<row><td>InstallWelcome</td><td>Next</td><td>NewDialog</td><td>ReadyToInstall</td><td>1</td><td>0</td></row>
 		<row><td>LicenseAgreement</td><td>Back</td><td>NewDialog</td><td>InstallWelcome</td><td>1</td><td>0</td></row>
 		<row><td>LicenseAgreement</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
 		<row><td>LicenseAgreement</td><td>ISPrintButton</td><td>DoAction</td><td>ISPrint</td><td>1</td><td>0</td></row>
@@ -972,7 +980,7 @@
 		<row><td>ReadmeInformation</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>1</td></row>
 		<row><td>ReadmeInformation</td><td>Next</td><td>NewDialog</td><td>CustomerInformation</td><td>1</td><td>1</td></row>
 		<row><td>ReadyToInstall</td><td>Back</td><td>NewDialog</td><td>CustomSetup</td><td>Installed OR _IsSetupTypeMin = "Custom"</td><td>2</td></row>
-		<row><td>ReadyToInstall</td><td>Back</td><td>NewDialog</td><td>CustomerInformation</td><td>NOT Installed</td><td>1</td></row>
+		<row><td>ReadyToInstall</td><td>Back</td><td>NewDialog</td><td>InstallWelcome</td><td>NOT Installed</td><td>1</td></row>
 		<row><td>ReadyToInstall</td><td>Back</td><td>NewDialog</td><td>MaintenanceType</td><td>Installed AND _IsMaintenance = "Reinstall"</td><td>3</td></row>
 		<row><td>ReadyToInstall</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
 		<row><td>ReadyToInstall</td><td>InstallNow</td><td>EndDialog</td><td>Return</td><td>OutOfNoRbDiskSpace &lt;&gt; 1</td><td>0</td></row>
@@ -1049,8 +1057,15 @@
 	<table name="CreateFolder">
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
-		<row><td>INSTALLDIR</td><td>ExcelAddIn1.Primary_output</td></row>
+		<row><td>INSTALLDIR</td><td>ExcelAddIn1.dll</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
+		<row><td>INSTALLDIR</td><td>Microsoft.Office.Tools.Common.dll</td></row>
+		<row><td>INSTALLDIR</td><td>Microsoft.Office.Tools.Common.v4.0.Utilities.dll</td></row>
+		<row><td>INSTALLDIR</td><td>Microsoft.Office.Tools.Excel.dll</td></row>
+		<row><td>INSTALLDIR</td><td>Microsoft.Office.Tools.dll</td></row>
+		<row><td>INSTALLDIR</td><td>Microsoft.Office.Tools.v4.0.Framework.dll</td></row>
+		<row><td>INSTALLDIR</td><td>Microsoft.VisualStudio.Tools.Applications.Runtime.dll</td></row>
+		<row><td>INSTALLDIR</td><td>MySql.Data.dll</td></row>
 	</table>
 
 	<table name="CustomAction">
@@ -1140,7 +1155,7 @@
 		<row><td>FavoritesFolder</td><td>TARGETDIR</td><td>.:FAVORI~1|Favorites</td><td/><td>0</td><td/></row>
 		<row><td>FontsFolder</td><td>TARGETDIR</td><td>.:Fonts</td><td/><td>0</td><td/></row>
 		<row><td>GlobalAssemblyCache</td><td>TARGETDIR</td><td>.:Global~1|GlobalAssemblyCache</td><td/><td>0</td><td/></row>
-		<row><td>INSTALLDIR</td><td>TRADERADDIN</td><td>.</td><td/><td>0</td><td/></row>
+		<row><td>INSTALLDIR</td><td>TRADERADDIN1</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>ISCommonFilesFolder</td><td>CommonFilesFolder</td><td>Instal~1|InstallShield</td><td/><td>0</td><td/></row>
 		<row><td>ISMyCompanyDir</td><td>ProgramFilesFolder</td><td>MYCOMP~1|My Company Name</td><td/><td>0</td><td/></row>
 		<row><td>ISMyProductDir</td><td>ISMyCompanyDir</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
@@ -1163,6 +1178,7 @@
 		<row><td>SystemFolder</td><td>TARGETDIR</td><td>.:System32</td><td/><td>0</td><td/></row>
 		<row><td>TARGETDIR</td><td/><td>SourceDir</td><td/><td>0</td><td/></row>
 		<row><td>TRADERADDIN</td><td>ProgramFilesFolder</td><td>TRADER~1|TraderAddIn</td><td/><td>0</td><td/></row>
+		<row><td>TRADERADDIN1</td><td>AppDataFolder</td><td>TRADER~1|TraderAddIn</td><td/><td>0</td><td/></row>
 		<row><td>TempFolder</td><td>TARGETDIR</td><td>.:Temp</td><td/><td>0</td><td/></row>
 		<row><td>TemplateFolder</td><td>TARGETDIR</td><td>.:ShellNew</td><td/><td>0</td><td/></row>
 		<row><td>USERPROFILE</td><td>TARGETDIR</td><td>.:USERPR~1|UserProfile</td><td/><td>0</td><td/></row>
@@ -1859,8 +1875,15 @@
 	<table name="FeatureComponents">
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
-		<row><td>AlwaysInstall</td><td>ExcelAddIn1.Primary_output</td></row>
+		<row><td>AlwaysInstall</td><td>ExcelAddIn1.dll</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
+		<row><td>AlwaysInstall</td><td>Microsoft.Office.Tools.Common.dll</td></row>
+		<row><td>AlwaysInstall</td><td>Microsoft.Office.Tools.Common.v4.0.Utilities.dll</td></row>
+		<row><td>AlwaysInstall</td><td>Microsoft.Office.Tools.Excel.dll</td></row>
+		<row><td>AlwaysInstall</td><td>Microsoft.Office.Tools.dll</td></row>
+		<row><td>AlwaysInstall</td><td>Microsoft.Office.Tools.v4.0.Framework.dll</td></row>
+		<row><td>AlwaysInstall</td><td>Microsoft.VisualStudio.Tools.Applications.Runtime.dll</td></row>
+		<row><td>AlwaysInstall</td><td>MySql.Data.dll</td></row>
 	</table>
 
 	<table name="File">
@@ -1875,9 +1898,23 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
+		<row><td>exceladdin1.dll</td><td>ExcelAddIn1.dll</td><td>EXCELA~1.DLL|ExcelAddIn1.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\am\Documents\Visual Studio 2015\Projects\ExcelAddIn1\ExcelAddIn1\bin\Release\ExcelAddIn1.dll</td><td>1</td><td/></row>
 		<row><td>exceladdin1.dll.manifest</td><td>ISX_DEFAULTCOMPONENT</td><td>EXCELA~1.MAN|ExcelAddIn1.dll.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\am\Documents\Visual Studio 2015\Projects\ExcelAddIn1\ExcelAddIn1\bin\Release\ExcelAddIn1.dll.manifest</td><td>1</td><td/></row>
-		<row><td>exceladdin1.primary_output</td><td>ExcelAddIn1.Primary_output</td><td>ExcelAddIn1.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;ExcelAddIn1&gt;|Built</td><td>3</td><td/></row>
+		<row><td>exceladdin1.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>EXCELA~1.PDB|ExcelAddIn1.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\am\Documents\Visual Studio 2015\Projects\ExcelAddIn1\ExcelAddIn1\bin\Release\ExcelAddIn1.pdb</td><td>1</td><td/></row>
 		<row><td>exceladdin1.vsto</td><td>ISX_DEFAULTCOMPONENT</td><td>EXCELA~1.VST|ExcelAddIn1.vsto</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\am\Documents\Visual Studio 2015\Projects\ExcelAddIn1\ExcelAddIn1\bin\Release\ExcelAddIn1.vsto</td><td>1</td><td/></row>
+		<row><td>microsoft.office.tools.commo</td><td>Microsoft.Office.Tools.Common.dll</td><td>MICROS~1.DLL|Microsoft.Office.Tools.Common.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\am\Documents\Visual Studio 2015\Projects\ExcelAddIn1\ExcelAddIn1\bin\Release\Microsoft.Office.Tools.Common.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.office.tools.commo1</td><td>Microsoft.Office.Tools.Common.v4.0.Utilities.dll</td><td>MICROS~1.DLL|Microsoft.Office.Tools.Common.v4.0.Utilities.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\am\Documents\Visual Studio 2015\Projects\ExcelAddIn1\ExcelAddIn1\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.office.tools.commo2</td><td>ISX_DEFAULTCOMPONENT</td><td>MICROS~1.XML|Microsoft.Office.Tools.Common.v4.0.Utilities.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\am\Documents\Visual Studio 2015\Projects\ExcelAddIn1\ExcelAddIn1\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.xml</td><td>1</td><td/></row>
+		<row><td>microsoft.office.tools.commo3</td><td>ISX_DEFAULTCOMPONENT</td><td>MICROS~1.XML|Microsoft.Office.Tools.Common.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\am\Documents\Visual Studio 2015\Projects\ExcelAddIn1\ExcelAddIn1\bin\Release\Microsoft.Office.Tools.Common.xml</td><td>1</td><td/></row>
+		<row><td>microsoft.office.tools.dll</td><td>Microsoft.Office.Tools.dll</td><td>MICROS~1.DLL|Microsoft.Office.Tools.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\am\Documents\Visual Studio 2015\Projects\ExcelAddIn1\ExcelAddIn1\bin\Release\Microsoft.Office.Tools.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.office.tools.excel</td><td>Microsoft.Office.Tools.Excel.dll</td><td>MICROS~1.DLL|Microsoft.Office.Tools.Excel.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\am\Documents\Visual Studio 2015\Projects\ExcelAddIn1\ExcelAddIn1\bin\Release\Microsoft.Office.Tools.Excel.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.office.tools.excel1</td><td>ISX_DEFAULTCOMPONENT</td><td>MICROS~1.XML|Microsoft.Office.Tools.Excel.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\am\Documents\Visual Studio 2015\Projects\ExcelAddIn1\ExcelAddIn1\bin\Release\Microsoft.Office.Tools.Excel.xml</td><td>1</td><td/></row>
+		<row><td>microsoft.office.tools.v4.0.</td><td>Microsoft.Office.Tools.v4.0.Framework.dll</td><td>MICROS~1.DLL|Microsoft.Office.Tools.v4.0.Framework.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\am\Documents\Visual Studio 2015\Projects\ExcelAddIn1\ExcelAddIn1\bin\Release\Microsoft.Office.Tools.v4.0.Framework.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.office.tools.v4.0.1</td><td>ISX_DEFAULTCOMPONENT</td><td>MICROS~1.XML|Microsoft.Office.Tools.v4.0.Framework.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\am\Documents\Visual Studio 2015\Projects\ExcelAddIn1\ExcelAddIn1\bin\Release\Microsoft.Office.Tools.v4.0.Framework.xml</td><td>1</td><td/></row>
+		<row><td>microsoft.visualstudio.tools</td><td>Microsoft.VisualStudio.Tools.Applications.Runtime.dll</td><td>MICROS~1.DLL|Microsoft.VisualStudio.Tools.Applications.Runtime.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\am\Documents\Visual Studio 2015\Projects\ExcelAddIn1\ExcelAddIn1\bin\Release\Microsoft.VisualStudio.Tools.Applications.Runtime.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.visualstudio.tools1</td><td>ISX_DEFAULTCOMPONENT</td><td>MICROS~1.XML|Microsoft.VisualStudio.Tools.Applications.Runtime.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\am\Documents\Visual Studio 2015\Projects\ExcelAddIn1\ExcelAddIn1\bin\Release\Microsoft.VisualStudio.Tools.Applications.Runtime.xml</td><td>1</td><td/></row>
+		<row><td>mysql.data.dll</td><td>MySql.Data.dll</td><td>MYSQLD~1.DLL|MySql.Data.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\am\Documents\Visual Studio 2015\Projects\ExcelAddIn1\ExcelAddIn1\bin\Release\MySql.Data.dll</td><td>1</td><td/></row>
+		<row><td>mysql.data.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>MYSQLD~1.XML|MySql.Data.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\am\Documents\Visual Studio 2015\Projects\ExcelAddIn1\ExcelAddIn1\bin\Release\MySql.Data.xml</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2021,8 +2058,15 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>ExcelAddIn1.Primary_output</td><td/><td/><td>_4115CF6A_6570_4806_B977_FE406961944E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ExcelAddIn1.dll</td><td/><td/><td>_441CAAFF_2F7C_472C_A4E0_3A643100E8DE_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_6FE9A246_CA12_4CED_88C0_BB12C932B127_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Office.Tools.Common.dll</td><td/><td/><td>_4A68F87C_0FCB_483B_825E_06C1C4C69537_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Office.Tools.Common.v4.0.Utilities.dll</td><td/><td/><td>_6740E17A_94BF_4C60_9605_DFEFC1E033E1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Office.Tools.Excel.dll</td><td/><td/><td>_A7755BFA_65C3_4774_BED3_0BEC25514FC1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Office.Tools.dll</td><td/><td/><td>_D2CF81ED_2B62_4327_A3E8_2C50CEFDA226_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Office.Tools.v4.0.Framework.dll</td><td/><td/><td>_28FCD659_B9BA_4BCA_869F_CD25BB135857_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.VisualStudio.Tools.Applications.Runtime.dll</td><td/><td/><td>_FA020DF9_AA18_4F97_A42C_BEB84D7DB119_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MySql.Data.dll</td><td/><td/><td>_4FDCE791_1489_4869_8092_B2329CC122C2_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2578,7 +2622,7 @@
 		<col def="I2">Order</col>
 		<col def="I2">ISSetupLocation</col>
 		<col def="S255">ISReleaseFlags</col>
-		<row><td>_333B34D3_E9FB_4136_87E8_E128DC3E1101_</td><td>Microsoft .NET Framework 4.6 Full.prq</td><td/><td/><td/></row>
+		<row><td>_929523B0_9377_478F_A52E_4104B043C46A_</td><td>Microsoft .NET Framework 4.5 Full.prq</td><td/><td/><td/></row>
 		<row><td>_C6123324_027D_4E8B_BFF6_9D29F55B81A5_</td><td>Microsoft VSTO 2010 Runtime.prq</td><td/><td/><td/></row>
 	</table>
 
@@ -2613,9 +2657,10 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>Your Company Name</td><td>0</td><td/><td>2116307281</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>am</td><td>0</td><td/><td>-2044453685</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>2116307281</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>2116307281</td></row>
+		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION45FULL</td><td>1033</td><td>Microsoft .NET Framework 4.5 Full package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>-2044409493</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>2116307281</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>2116307281</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>2116307281</td></row>
@@ -3715,6 +3760,10 @@
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>2116307281</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>2116311377</td></row>
 		<row><td>ID_STRING2</td><td>1033</td><td/><td>0</td><td/><td>2116329650</td></row>
+		<row><td>ID_STRING3</td><td>1033</td><td/><td>0</td><td/><td>2116337426</td></row>
+		<row><td>ID_STRING4</td><td>1033</td><td/><td>0</td><td/><td>-2044459222</td></row>
+		<row><td>ID_STRING5</td><td>1033</td><td>http://www.am.com</td><td>0</td><td/><td>-2044453685</td></row>
+		<row><td>ID_STRING6</td><td>1033</td><td>am</td><td>0</td><td/><td>-2044453685</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>2116307281</td></row>
 	</table>
 
@@ -3961,7 +4010,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{BC928C52-0DCD-4F0B-A732-4272D6654B65}</td></row>
 		<row><td>ISUSSignature</td><td>{08CA42B4-00D2-4E02-93B2-88A7CCE8F91C}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewObjects,viewProject,viewRelease,viewISToday,viewTextMessages</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewObjects,viewProject,viewRelease,viewISToday,viewTextMessages,viewUpdateService,viewAppFiles,viewUpgradePaths</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -3975,6 +4024,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>SccPath</td><td/></row>
 		<row><td>SchemaVersion</td><td>776</td></row>
 		<row><td>Type</td><td>MSIE</td></row>
+		<row><td>VSSccAuxPath</td><td/></row>
+		<row><td>VSSccLocalPath</td><td/></row>
+		<row><td>VSSccProvider</td><td/></row>
 	</table>
 
 	<table name="InstallUISequence">
@@ -4019,6 +4071,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 	<table name="LaunchCondition">
 		<col key="yes" def="s255">Condition</col>
 		<col def="l255">Description</col>
+		<row><td>DOTNETVERSION45FULL&gt;="#1"</td><td>##IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION45FULL##</td></row>
 	</table>
 
 	<table name="ListBox">
@@ -4268,6 +4321,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ARPINSTALLLOCATION</td><td/><td/></row>
 		<row><td>ARPPRODUCTICON</td><td>ARPPRODUCTICON.exe</td><td/></row>
 		<row><td>ARPSIZE</td><td/><td/></row>
+		<row><td>ARPURLINFOABOUT</td><td>##ID_STRING5##</td><td/></row>
 		<row><td>AgreeToLicense</td><td>No</td><td/></row>
 		<row><td>ApplicationUsers</td><td>AllUsers</td><td/></row>
 		<row><td>DWUSINTERVAL</td><td>30</td><td/></row>
@@ -4332,7 +4386,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>ProductCode</td><td>{72C7D18E-0FDD-40C0-AD35-2D9A56134D26}</td><td/></row>
-		<row><td>ProductName</td><td>Setup2</td><td/></row>
+		<row><td>ProductName</td><td>TraderAddIn</td><td/></row>
 		<row><td>ProductVersion</td><td>1.00.0000</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
@@ -4345,7 +4399,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>RestartManagerOption</td><td>CloseRestart</td><td/></row>
 		<row><td>SERIALNUMBER</td><td/><td/></row>
 		<row><td>SERIALNUMVALSUCCESSRETVAL</td><td>1</td><td/></row>
-		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR</td><td/></row>
+		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION45FULL</td><td/></row>
 		<row><td>SelectedSetupType</td><td>##IDS__DisplayName_Typical##</td><td/></row>
 		<row><td>SetupType</td><td>Typical</td><td/></row>
 		<row><td>UpgradeCode</td><td>{EF1118BA-BFCF-4CD7-B659-6B2494D29815}</td><td/></row>
@@ -4390,6 +4444,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s255">Key</col>
 		<col def="S255">Name</col>
 		<col def="I2">Type</col>
+		<row><td>DotNet45Full</td><td>2</td><td>SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full</td><td>Version</td><td>2</td></row>
 	</table>
 
 	<table name="Registry">
@@ -4400,10 +4455,10 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S0">Value</col>
 		<col def="s72">Component_</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>Registry2</td><td>1</td><td>HKEY_CURRENT_USER\Software\Microsoft\Office\Excel\Addins\ExcelAddIn1</td><td>Description</td><td>Excel Trader</td><td>ISX_DEFAULTCOMPONENT</td><td>0</td></row>
-		<row><td>Registry4</td><td>1</td><td>HKEY_CURRENT_USER\Software\Microsoft\Office\Excel\Addins\ExcelAddIn1</td><td>FriendlyName</td><td>Excel Trader</td><td>ISX_DEFAULTCOMPONENT</td><td>0</td></row>
-		<row><td>Registry5</td><td>1</td><td>HKEY_CURRENT_USER\Software\Microsoft\Office\Excel\Addins\ExcelAddIn1</td><td>LoadBehavior</td><td>#3</td><td>ISX_DEFAULTCOMPONENT</td><td>0</td></row>
-		<row><td>Registry6</td><td>1</td><td>HKEY_CURRENT_USER\Software\Microsoft\Office\Excel\Addins\ExcelAddIn1</td><td>Manifest</td><td>file:///[INSTALLDIR]ExcelAddIn.vsto|vstolocal</td><td>ISX_DEFAULTCOMPONENT</td><td>0</td></row>
+		<row><td>Registry2</td><td>1</td><td>Software\Microsoft\Office\Excel\Addins\ExcelAddIn1</td><td>Description</td><td>Excel Trader</td><td>ISX_DEFAULTCOMPONENT</td><td>0</td></row>
+		<row><td>Registry4</td><td>1</td><td>Software\Microsoft\Office\Excel\Addins\ExcelAddIn1</td><td>FriendlyName</td><td>Excel Trader</td><td>ISX_DEFAULTCOMPONENT</td><td>0</td></row>
+		<row><td>Registry5</td><td>1</td><td>Software\Microsoft\Office\Excel\Addins\ExcelAddIn1</td><td>LoadBehavior</td><td>#3</td><td>ISX_DEFAULTCOMPONENT</td><td>0</td></row>
+		<row><td>Registry6</td><td>1</td><td>Software\Microsoft\Office\Excel\Addins\ExcelAddIn1</td><td>Manifest</td><td>file:///[INSTALLDIR]ExcelAddIn1.vsto|vstolocal</td><td>ISX_DEFAULTCOMPONENT</td><td>0</td></row>
 	</table>
 
 	<table name="RemoveFile">

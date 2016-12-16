@@ -5,10 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelAddIn1", "ExcelAddIn1\ExcelAddIn1.csproj", "{E0E009CC-BB01-46B0-96E5-9FE1DF97D8ED}"
 EndProject
-Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Setup2", "Setup2\Setup2.isproj", "{F614FAEF-1D50-44A9-9602-8B450ACFDD44}"
-	ProjectSection(ProjectDependencies) = postProject
-		{E0E009CC-BB01-46B0-96E5-9FE1DF97D8ED} = {E0E009CC-BB01-46B0-96E5-9FE1DF97D8ED}
-	EndProjectSection
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "TraderSetup", "Setup2\TraderSetup.isproj", "{F614FAEF-1D50-44A9-9602-8B450ACFDD44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
